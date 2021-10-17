@@ -1,0 +1,146 @@
+@import 'variables';
+@import 'reset';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        display: inline-block;
+        background-color: $title-color;
+        color: #fff;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        width: 550px;
+        padding: 15px 0 30px 10px;
+        margin: 20px 0 25px 0;
+    }
+
+    section {
+        border: $border-settings;
+        border-radius: 5px;
+        width: 550px;
+        padding: 25px 20px;
+
+        .shopping-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                height: 35px;
+                border: $border-settings;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 20px;
+            }
+
+            button {
+                height: 35px;
+                font-size: 15px;
+                background-color: $input-button-color;
+                color: #fff;
+                border-radius: 5px;
+                width: 75px;
+                border: 0;
+                margin-left: 5px;
+            }
+
+            button:disabled {
+                border: 1px solid #999999;
+                background-color: #cccccc;
+                color: #666666;
+            }
+
+            p {
+                margin-left: 5px;
+                color: #FF0000;
+                display: none;
+            }
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: 0;
+        }
+
+        h2:nth-of-type(1) {
+            margin: 5px 0;
+        }
+
+        h2:nth-of-type(2) {
+            margin: 10px 0;
+        }
+
+        ul {
+
+            li {
+                p {
+                    width: 80%;
+                    font-family:Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                }
+
+                button {
+                    border: 0px;
+                    font-size: 20px;
+                    padding: 0px 8px;
+                    background-color: transparent;
+                }
+
+                button:nth-of-type(1) {
+                    color: $check-button-color;
+                }
+
+                button:nth-of-type(2) {
+                    color: $delete-button-color;
+                }
+            }
+
+
+            li:first-child {
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border: $border-settings;
+            }
+
+            li:last-child {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom: $border-settings;
+                border-left: $border-settings;
+                border-right: $border-settings;
+            }
+
+
+        }
+    }
+}
+
+.deffaultLi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: $border-settings;
+    border-left: $border-settings;
+    border-right: $border-settings;
+    padding: 5px 10px;
+    background-color: #fff;
+    background-color: transparent;
+}
+
+.checkedLi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: $border-settings;
+    border-left: $border-settings;
+    border-right: $border-settings;
+    padding: 5px 10px;
+    background-color: #52a451;
+    text-decoration: line-through;
+}
